@@ -1,12 +1,14 @@
 ---
 layout: page
 permalink: /teaching/
-title: teaching
-description: Materials for courses you taught. Replace this text with your description.
+title: Teaching
+description: I do not teach per se, but I have another website where you can find more than 60 mathematics videos
 nav: true
 nav_order: 5
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+You can see my other website [here](https://sachauniwebe.wixsite.com/website), and check my youtube account [here](https://www.youtube.com/@uniwebebraun5130). 
 
-Organize your courses by years, topics, or universities, however you like!
+I also wrote a subject for an exam in analysis, [check it out !](/assets/pdf/sujet_analyse_3.pdf)
+
+
