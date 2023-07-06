@@ -1,80 +1,88 @@
 ---
 layout: page
-title: project 1
-description: a project with a background image
-img: assets/img/publication_preview/brownian-motion.gif
+title: La Compo Website
+description: A website project
+img: assets/img/projects/lacompo/lacompo.gif
 importance: 1
-category: work
+category: school project
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# LA COMPO
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## Authors
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+Axel Navarro and Sacha Braun
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+## Date
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+24/02/2022
 
+## Modal Report
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+### Introduction
 
+The objective of this report is to present the different features of the LA COMPO website and to describe the used database. This website aims to assist the X rugby team's coaches in forming their team for upcoming matches and providing feedback to players on their performance in past games. Please find in another attached file (`readme.txt`), some settings and useful tips for using the site.
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+![Home page of the website](assets/img/projects/lacompo/Accueil02.png)
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+### Users
+
+There are two types of users on this site, the coaches and the players, each with access to different features.
+
+**Player:**
+
+The player is the basic user representing a rugby team player on the site. The player's attributes are:
+
+- Usual position
+- Year of promotion
+- Email
+- Date of birth
+- Photo (modifiable by the player)
+- Login information (login, password)
+
+The player can view the upcoming matches he will play, his player file with all the matches he participated in and his average rating. He also has access to all of his team's player files and can modify his account information.
+
+**Coach:**
+
+The coach is an admin of the site as they are the only one who can modify the database beyond login information. The coach can:
+
+- Schedule a new match and assemble a team for this match
+- Modify the team composition for a match that has not yet been completed (we will see later what it means to complete a match)
+- Fill in the score of a played match and rate each player who played this match
+- Delete a match
+- Modify a player's usual position
+- View all the player files of the team
+
+In practice, to create a coach profile, validation by another administrator designated as the Sports Bureau Director, for example, would be required.
+
+### Databases
+
+![Database](assets/img/projects/lacompo/base_de_donnees.png)
+
+The database consists of 4 tables:
+
+- The `joueurs` table groups all the users attached to the Player class. Each player in the table is recognized by the primary key "login". This table contains 9 different fields. The profile pictures of the players are stored in the "images" directory of the folder and are in the form "login.jpg". To facilitate the setup of the database, we chose the login "prenom.nom" for each user of the site (except alice and bob).
+
+- The `entraîneurs` table groups all users attached to the Coach class. The primary key is also "login".
+
+- The `matchs` table is made up of the different rugby matches inserted by the registered coaches on the site. The primary key of this table is `idMatch` (auto-incremented). The other fields are the date, the location of the match, the home and visiting team, the score, the coach who inserted the match, and the boolean `marked`. This field serves as a witness on the site to know if the match has been completed by a coach or not.
+
+- Finally, the `ficheMatchJoueur` table which links the previous tables, it is used to know the team composition for a match. The elements of this table represent the presence of a player for a given match, which is why the primary key is double. It is the `idMatch` and `login` fields that ensure the uniqueness of the element. Once the corresponding match has been completed by a coach, the `note` field goes from `NULL` to an integer between 1 and10 to assess the player's performance in the match.
+
+In the following pages, we will see the different features of the LA COMPO site.
+
+### Forming a match
+
+To create a match, you must be logged in with a coach's profile. The creation of a match was done in JavaScript. When the coach (currently only rugby) arrives on the interface, they have on their left a menu with all their players sorted by drawers according to their positions and on their right a rugby field with places to come and drop their players. All you have to do is click on a position, for example "1st line" to see all the players from the corresponding position appear. Then, thanks to a drag and drop system, the coach can drag the names of his players to the indicated places.
+
+![Drag and drop to create a match](assets/img/projects/lacompo/nouveauMatch.png)
+
+Once the entire composition is complete, along with information such as date, opposing team, etc., the coach can validate, which will create a new match with their composition and automatically send an email to each of the selected players.
+
+### Managing a team and its matches
+
+Once the match is created, it is visible to all users: they can click on the match card and go see the composition. When a composition is displayed, any logged-in user can click on a player in the match to access their file. Thus a coach quickly has all the information on their team composition and can decide before the start of the match to modify this composition. For this, they must click on "Edit" and access an interface of the same type as that of match formation.
+
+![Match page before it's played](assets/img/projects/lacompo/modifier02.png)
+
+The coach also has the option to delete a match in the `My matches` menu by clicking on the cross next to the match to be deleted.
