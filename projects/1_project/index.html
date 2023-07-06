@@ -10,9 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>project 1 | Sacha  Braun</title>
+    <title>La Compo Website | Sacha  Braun</title>
     <meta name="author" content="Sacha  Braun">
-    <meta name="description" content="a project with a background image">
+    <meta name="description" content="A website project">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -119,145 +119,101 @@
         <div class="post">
 
           <header class="post-header">
-            <h1 class="post-title">project 1</h1>
-            <p class="post-description">a project with a background image</p>
+            <h1 class="post-title">La Compo Website</h1>
+            <p class="post-description">A website project</p>
           </header>
 
           <article>
-            <p>Every project has a beautiful feature showcase page.
-It’s easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.</p>
+            <h1 id="la-compo">LA COMPO</h1>
 
-<p>To give your project a background in the portfolio page, just add the img tag to the front matter like so:</p>
+<h2 id="authors">Authors</h2>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>---
-layout: page
-title: project
-description: a project with a background image
-img: /assets/img/12.jpg
----
-</code></pre></div></div>
+<p>Axel Navarro and Sacha Braun</p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<h2 id="date">Date</h2>
 
-  <picture>
-    
+<p>24/02/2022</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/1.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<h2 id="modal-report">Modal Report</h2>
 
-  </picture>
+<h3 id="introduction">Introduction</h3>
 
-</figure>
+<p>The objective of this report is to present the different features of the LA COMPO website and to describe the used database. This website aims to assist the X rugby team’s coaches in forming their team for upcoming matches and providing feedback to players on their performance in past games. Please find in another attached file (<code class="language-plaintext highlighter-rouge">readme.txt</code>), some settings and useful tips for using the site.</p>
 
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p><img src="assets/img/projects/lacompo/Accueil02.png" alt="Home page of the website"></p>
 
-  <picture>
-    
+<h3 id="users">Users</h3>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/3.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>There are two types of users on this site, the coaches and the players, each with access to different features.</p>
 
-  </picture>
+<p><strong>Player:</strong></p>
 
-</figure>
+<p>The player is the basic user representing a rugby team player on the site. The player’s attributes are:</p>
 
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<ul>
+  <li>Usual position</li>
+  <li>Year of promotion</li>
+  <li>Email</li>
+  <li>Date of birth</li>
+  <li>Photo (modifiable by the player)</li>
+  <li>Login information (login, password)</li>
+</ul>
 
-  <picture>
-    
+<p>The player can view the upcoming matches he will play, his player file with all the matches he participated in and his average rating. He also has access to all of his team’s player files and can modify his account information.</p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p><strong>Coach:</strong></p>
 
-  </picture>
+<p>The coach is an admin of the site as they are the only one who can modify the database beyond login information. The coach can:</p>
 
-</figure>
+<ul>
+  <li>Schedule a new match and assemble a team for this match</li>
+  <li>Modify the team composition for a match that has not yet been completed (we will see later what it means to complete a match)</li>
+  <li>Fill in the score of a played match and rate each player who played this match</li>
+  <li>Delete a match</li>
+  <li>Modify a player’s usual position</li>
+  <li>View all the player files of the team</li>
+</ul>
 
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        <figure>
+<p>In practice, to create a coach profile, validation by another administrator designated as the Sports Bureau Director, for example, would be required.</p>
 
-  <picture>
-    
+<h3 id="databases">Databases</h3>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/5.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p><img src="assets/img/projects/lacompo/base_de_donnees.png" alt="Database"></p>
 
-  </picture>
+<p>The database consists of 4 tables:</p>
 
-</figure>
+<ul>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">joueurs</code> table groups all the users attached to the Player class. Each player in the table is recognized by the primary key “login”. This table contains 9 different fields. The profile pictures of the players are stored in the “images” directory of the folder and are in the form “login.jpg”. To facilitate the setup of the database, we chose the login “prenom.nom” for each user of the site (except alice and bob).</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">entraîneurs</code> table groups all users attached to the Coach class. The primary key is also “login”.</p>
+  </li>
+  <li>
+    <p>The <code class="language-plaintext highlighter-rouge">matchs</code> table is made up of the different rugby matches inserted by the registered coaches on the site. The primary key of this table is <code class="language-plaintext highlighter-rouge">idMatch</code> (auto-incremented). The other fields are the date, the location of the match, the home and visiting team, the score, the coach who inserted the match, and the boolean <code class="language-plaintext highlighter-rouge">marked</code>. This field serves as a witness on the site to know if the match has been completed by a coach or not.</p>
+  </li>
+  <li>
+    <p>Finally, the <code class="language-plaintext highlighter-rouge">ficheMatchJoueur</code> table which links the previous tables, it is used to know the team composition for a match. The elements of this table represent the presence of a player for a given match, which is why the primary key is double. It is the <code class="language-plaintext highlighter-rouge">idMatch</code> and <code class="language-plaintext highlighter-rouge">login</code> fields that ensure the uniqueness of the element. Once the corresponding match has been completed by a coach, the <code class="language-plaintext highlighter-rouge">note</code> field goes from <code class="language-plaintext highlighter-rouge">NULL</code> to an integer between 1 and10 to assess the player’s performance in the match.</p>
+  </li>
+</ul>
 
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<p>In the following pages, we will see the different features of the LA COMPO site.</p>
 
-<p>You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, <em>bled</em> for your project, and then… you reveal its glory in the next row of images.</p>
+<h3 id="forming-a-match">Forming a match</h3>
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        <figure>
+<p>To create a match, you must be logged in with a coach’s profile. The creation of a match was done in JavaScript. When the coach (currently only rugby) arrives on the interface, they have on their left a menu with all their players sorted by drawers according to their positions and on their right a rugby field with places to come and drop their players. All you have to do is click on a position, for example “1st line” to see all the players from the corresponding position appear. Then, thanks to a drag and drop system, the coach can drag the names of his players to the indicated places.</p>
 
-  <picture>
-    
+<p><img src="assets/img/projects/lacompo/nouveauMatch.png" alt="Drag and drop to create a match"></p>
 
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/6.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+<p>Once the entire composition is complete, along with information such as date, opposing team, etc., the coach can validate, which will create a new match with their composition and automatically send an email to each of the selected players.</p>
 
-  </picture>
+<h3 id="managing-a-team-and-its-matches">Managing a team and its matches</h3>
 
-</figure>
+<p>Once the match is created, it is visible to all users: they can click on the match card and go see the composition. When a composition is displayed, any logged-in user can click on a player in the match to access their file. Thus a coach quickly has all the information on their team composition and can decide before the start of the match to modify this composition. For this, they must click on “Edit” and access an interface of the same type as that of match formation.</p>
 
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        <figure>
+<p><img src="assets/img/projects/lacompo/modifier02.png" alt="Match page before it's played"></p>
 
-  <picture>
-    
-
-    <!-- Fallback to the original file -->
-    <img src="/assets/img/11.jpg" class="img-fluid rounded z-depth-1" width="auto" height="auto" title="example image" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
-
-  </picture>
-
-</figure>
-
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-<p>The code is simple.
-Just wrap your images with <code class="language-plaintext highlighter-rouge">&lt;div class="col-sm"&gt;</code> and place them inside <code class="language-plaintext highlighter-rouge">&lt;div class="row"&gt;</code> (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/" rel="external nofollow noopener" target="_blank">Bootstrap Grid</a> system).
-To make images responsive, add <code class="language-plaintext highlighter-rouge">img-fluid</code> class to each; for rounded corners and shadows use <code class="language-plaintext highlighter-rouge">rounded</code> and <code class="language-plaintext highlighter-rouge">z-depth-1</code> classes.
-Here’s the code for the last row of images above:</p>
-
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"row justify-content-sm-center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-8 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"col-sm-4 mt-3 mt-md-0"</span><span class="nt">&gt;</span>
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span>
-</code></pre></div></div>
-
+<p>The coach also has the option to delete a match in the <code class="language-plaintext highlighter-rouge">My matches</code> menu by clicking on the cross next to the match to be deleted.</p>
 
           </article>
 
