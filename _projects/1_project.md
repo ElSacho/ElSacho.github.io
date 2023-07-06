@@ -7,17 +7,14 @@ importance: 1
 category: work
 ---
 
-# LA COMPO
 
-## Authors
+### Authors
 
 Axel Navarro and Sacha Braun
 
-## Date
+### Date
 
 24/02/2022
-
-## Modal Report
 
 ### Introduction
 
