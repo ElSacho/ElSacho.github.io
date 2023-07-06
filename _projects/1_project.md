@@ -2,7 +2,7 @@
 layout: page
 title: La Compo Website
 description: A website project
-img: assets/img/projects/lacompo/lacompo.gif
+img: assets/img/3.jpg
 importance: 1
 category: school project
 ---
@@ -23,6 +23,11 @@ Axel Navarro and Sacha Braun
 
 The objective of this report is to present the different features of the LA COMPO website and to describe the used database. This website aims to assist the X rugby team's coaches in forming their team for upcoming matches and providing feedback to players on their performance in past games. Please find in another attached file (`readme.txt`), some settings and useful tips for using the site.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 ![Home page of the website](assets/img/projects/lacompo/Accueil02.png)
 
 ### Users
@@ -57,6 +62,11 @@ In practice, to create a coach profile, validation by another administrator desi
 
 ### Databases
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 ![Database](assets/img/projects/lacompo/base_de_donnees.png)
 
 The database consists of 4 tables:
@@ -75,6 +85,11 @@ In the following pages, we will see the different features of the LA COMPO site.
 
 To create a match, you must be logged in with a coach's profile. The creation of a match was done in JavaScript. When the coach (currently only rugby) arrives on the interface, they have on their left a menu with all their players sorted by drawers according to their positions and on their right a rugby field with places to come and drop their players. All you have to do is click on a position, for example "1st line" to see all the players from the corresponding position appear. Then, thanks to a drag and drop system, the coach can drag the names of his players to the indicated places.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 ![Drag and drop to create a match](assets/img/projects/lacompo/nouveauMatch.png)
 
 Once the entire composition is complete, along with information such as date, opposing team, etc., the coach can validate, which will create a new match with their composition and automatically send an email to each of the selected players.
@@ -83,6 +98,11 @@ Once the entire composition is complete, along with information such as date, op
 
 Once the match is created, it is visible to all users: they can click on the match card and go see the composition. When a composition is displayed, any logged-in user can click on a player in the match to access their file. Thus a coach quickly has all the information on their team composition and can decide before the start of the match to modify this composition. For this, they must click on "Edit" and access an interface of the same type as that of match formation.
 
+<div class="row">
+    <div class="col-sm mt-3 mt-md-0">
+        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+    </div>
+</div>
 ![Match page before it's played](assets/img/projects/lacompo/modifier02.png)
 
 The coach also has the option to delete a match in the `My matches` menu by clicking on the cross next to the match to be deleted.
