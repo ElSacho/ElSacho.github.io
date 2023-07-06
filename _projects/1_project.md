@@ -4,7 +4,7 @@ title: La Compo Website
 description: A website project
 img: assets/img/3.jpg
 importance: 1
-category: school project
+category: work
 ---
 
 # LA COMPO
@@ -25,10 +25,10 @@ The objective of this report is to present the different features of the LA COMP
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/lacompo/Accueil02.png" title="Home page of the website" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-![Home page of the website](assets/img/projects/lacompo/Accueil02.png)
+
 
 ### Users
 
@@ -64,10 +64,10 @@ In practice, to create a coach profile, validation by another administrator desi
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/lacompo/base_de_donnees.png" title="Database" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-![Database](assets/img/projects/lacompo/base_de_donnees.png)
+
 
 The database consists of 4 tables:
 
@@ -87,10 +87,10 @@ To create a match, you must be logged in with a coach's profile. The creation of
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/lacompo/nouveauMatch.png" title="Drag and drop to create a match" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-![Drag and drop to create a match](assets/img/projects/lacompo/nouveauMatch.png)
+
 
 Once the entire composition is complete, along with information such as date, opposing team, etc., the coach can validate, which will create a new match with their composition and automatically send an email to each of the selected players.
 
@@ -100,9 +100,9 @@ Once the match is created, it is visible to all users: they can click on the mat
 
 <div class="row">
     <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
+        {% include figure.html path="assets/img/projects/lacompo/modifier02.png" title="Match page before it's played" class="img-fluid rounded z-depth-1" %}
     </div>
 </div>
-![Match page before it's played](assets/img/projects/lacompo/modifier02.png)
+
 
 The coach also has the option to delete a match in the `My matches` menu by clicking on the cross next to the match to be deleted.
