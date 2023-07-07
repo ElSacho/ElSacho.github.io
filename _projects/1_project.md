@@ -3,10 +3,13 @@ layout: page
 title: La Compo Website
 description: A website project
 img: assets/img/projects/lacompo/lacompo.gif
-importance: 1
+importance: 2
 category: work
 ---
 
+<p>
+    <img align="center" src="https://github.com/ElSacho/Sport-website" alt="GitHub Repository" />
+</p>
 
 ### Authors
 
