@@ -420,6 +420,34 @@ From here we have a black and white mask image with all parts of the image that 
 
 <p>We propose here the main function of our algorithm. This function takes as input an image, the matrix of points labelled by the user, the number of labelled points, the number of labels and the beta parameter. We have modified this version of the code to be consistent with the probability matrices presented above, but in the real code we use the Laplace matrix associated with the Q matrix.</p>
 
+<p>```python
+def random_walk(img, matrice_label, nbr_points_labelises ,nbrLabels ,beta=10):</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Build the Q matrix
+Q = get_matrice_Q(img/255,beta)
+
+# Permute this matrix to place the labeled vectors at the front
+vector_labelise = matrix_to_vector(matrice_label) 
+perm, vectorLabelise_ordonne = get_permutation(vector_labelise, nbr_points_labelises)
+Q = permuteL(Q,perm)
+
+# Extract the matrices needed to solve the equation
+M, Q_tilde = getMatricesToSolve(Q,vectorLabelise_ordonne,nbr_points_labelises, nbrLabels)
+
+# Solve the system to obtain the matrix of probabilities of belonging to each label
+xu = solve(M, Q_tilde)
+
+# Organize the results by transforming the probabilities into labeling 
+# and reorganizing the results in order
+x = transformEnLabel(M,xu)
+x = permutationVecteur(x, perm[::-1])
+imgLabel = resize_vector_to_matrix(x, img)
+
+# Return an array the size of the image to label where all the values are the label 
+# to which the points probably belong
+return imgLabel
+</code></pre></div></div>
+
 <h3 id="optimisations-and-limitations-of-our-algorithm">Optimisations and limitations of our algorithm</h3>
 
 <p>The good news is that our algorithm works. However, the computation time is considerably lower for small images. Indeed, for images that are too large, our computer was not able to perform the segmentation in a satisfactory time. We identified the problem, which was the permutation of the $Q$ matrix. Indeed, if we segment an image with $n=w \times h$ pixels, this matrix is a matrix of size $n \times n$. Our function \textit{permuteQ(Q,perm)} generates the permutation matrices necessary for the permutation of $Q$, then performs the permutation $Q’=PQP^{-1}$. This calculation thus consists of two multiplications of matrices of size $n \times n$. To give an idea, for an image of size $720 \times 480$, we multiply two matrices of size $345,600 \times 345,600$, i.e. $4 \times 345600^3$ operations. 
@@ -483,33 +511,6 @@ After some thought, we rethought our algorithm, and one solution to avoid this i
 
 <p>[2] Google, Mediapipe tracking for skeleton detection and segmentation mask https://google.github.io/mediapipe/solutions/hands.html</p>
 
-<p>```python
-def random_walk(img, matrice_label, nbr_points_labelises ,nbrLabels ,beta=10):</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># Build the Q matrix
-Q = get_matrice_Q(img/255,beta)
-
-# Permute this matrix to place the labeled vectors at the front
-vector_labelise = matrix_to_vector(matrice_label) 
-perm, vectorLabelise_ordonne = get_permutation(vector_labelise, nbr_points_labelises)
-Q = permuteL(Q,perm)
-
-# Extract the matrices needed to solve the equation
-M, Q_tilde = getMatricesToSolve(Q,vectorLabelise_ordonne,nbr_points_labelises, nbrLabels)
-
-# Solve the system to obtain the matrix of probabilities of belonging to each label
-xu = solve(M, Q_tilde)
-
-# Organize the results by transforming the probabilities into labeling 
-# and reorganizing the results in order
-x = transformEnLabel(M,xu)
-x = permutationVecteur(x, perm[::-1])
-imgLabel = resize_vector_to_matrix(x, img)
-
-# Return an array the size of the image to label where all the values are the label 
-# to which the points probably belong
-return imgLabel
-</code></pre></div></div>
 
           </article>
 
