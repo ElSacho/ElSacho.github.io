@@ -193,7 +193,32 @@ It is this calculation that we perform in our algorithm, with slightly different
 
 We propose here the main function of our algorithm. This function takes as input an image, the matrix of points labelled by the user, the number of labelled points, the number of labels and the beta parameter. We have modified this version of the code to be consistent with the probability matrices presented above, but in the real code we use the Laplace matrix associated with the Q matrix.
 
+```python
+def random_walk(img, matrice_label, nbr_points_labelises ,nbrLabels ,beta=10):
+    
+    # Build the Q matrix
+    Q = get_matrice_Q(img/255,beta)
+    
+    # Permute this matrix to place the labeled vectors at the front
+    vector_labelise = matrix_to_vector(matrice_label) 
+    perm, vectorLabelise_ordonne = get_permutation(vector_labelise, nbr_points_labelises)
+    Q = permuteL(Q,perm)
 
+    # Extract the matrices needed to solve the equation
+    M, Q_tilde = getMatricesToSolve(Q,vectorLabelise_ordonne,nbr_points_labelises, nbrLabels)
+
+    # Solve the system to obtain the matrix of probabilities of belonging to each label
+    xu = solve(M, Q_tilde)
+    
+    # Organize the results by transforming the probabilities into labeling 
+    # and reorganizing the results in order
+    x = transformEnLabel(M,xu)
+    x = permutationVecteur(x, perm[::-1])
+    imgLabel = resize_vector_to_matrix(x, img)
+    
+    # Return an array the size of the image to label where all the values are the label 
+    # to which the points probably belong
+    return imgLabel
 
 
 
@@ -246,29 +271,3 @@ To make the game more stressful, it allows no mistakes. The slightest mistake wi
 
 
 
-```python
-def random_walk(img, matrice_label, nbr_points_labelises ,nbrLabels ,beta=10):
-    
-    # Build the Q matrix
-    Q = get_matrice_Q(img/255,beta)
-    
-    # Permute this matrix to place the labeled vectors at the front
-    vector_labelise = matrix_to_vector(matrice_label) 
-    perm, vectorLabelise_ordonne = get_permutation(vector_labelise, nbr_points_labelises)
-    Q = permuteL(Q,perm)
-
-    # Extract the matrices needed to solve the equation
-    M, Q_tilde = getMatricesToSolve(Q,vectorLabelise_ordonne,nbr_points_labelises, nbrLabels)
-
-    # Solve the system to obtain the matrix of probabilities of belonging to each label
-    xu = solve(M, Q_tilde)
-    
-    # Organize the results by transforming the probabilities into labeling 
-    # and reorganizing the results in order
-    x = transformEnLabel(M,xu)
-    x = permutationVecteur(x, perm[::-1])
-    imgLabel = resize_vector_to_matrix(x, img)
-    
-    # Return an array the size of the image to label where all the values are the label 
-    # to which the points probably belong
-    return imgLabel
