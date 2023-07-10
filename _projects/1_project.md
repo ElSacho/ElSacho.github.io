@@ -3,7 +3,7 @@ layout: page
 title: La Compo Website
 description: A website project
 img: assets/img/projects/lacompo/lacompo.gif
-importance: 2
+importance: 3
 category: work
 ---
 
