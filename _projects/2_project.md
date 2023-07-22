@@ -9,10 +9,6 @@ category: work
 
 # Squidinf Game
 
-Ecole Polytechnique
-
-INF573
-
 <div class="repo p-2 text-center">
   <a href="https://github.com/ElSacho/Projet-INF573">
     <img class="repo-img-dark w-100" alt="Squid Game Computer Vision" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=Sport-website&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
@@ -20,8 +16,6 @@ INF573
 </div>
 
 Authors: Charles de Malefette - Sacha Braun
-
-[Github Repository](https://github.com/ElSacho/Projet-INF573)
 
 ## Introduction
 
