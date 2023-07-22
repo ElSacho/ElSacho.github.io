@@ -2,11 +2,17 @@
 layout: page
 title: La Compo Website
 description: A website project
-img: assets/img/projects/lacompo/lacompo.gif
+img: assets/img/projects/lacompo/GIF_compo.gif
 importance: 3
 category: work
 ---
 
+
+<div class="repo p-2 text-center">
+  <a href="https://github.com/ElSacho/Sport-website">
+    <img class="repo-img-dark w-100" alt="Sport-website" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=Sport-website&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  </a>
+</div>
 
 <div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
   <a href="https://github.com/ElSacho/Sport-website" target="_blank" rel="noopener noreferrer">

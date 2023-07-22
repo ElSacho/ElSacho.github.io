@@ -2,7 +2,7 @@
 layout: page
 title: Squid Game Video Game
 description: A computer vision video game inspired by Squid Game 
-img: assets/img/projects/inf573/inf573.gif
+img: assets/img/projects/inf573/GI_INF573.gif
 importance: 2
 category: work
 ---

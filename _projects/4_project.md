@@ -2,12 +2,17 @@
 layout: page
 title: A reinforcement learning overview
 description: Implementing RL technics on a self-made envirment
-img: assets/img/projects/hideOrJump/geneticAgent.gif
+img: assets/img/projects/hideOrJump/GIF_HoJ.gif
 importance: 1
 category: work
 ---
 
 # HideOrJump
+
+<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
+    {% include repository/repo.html repository="https://github.com/ElSacho/Sport-website" %}
+</div>
+
 
 ## Introduction 
 
