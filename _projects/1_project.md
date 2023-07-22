@@ -14,11 +14,6 @@ category: work
   </a>
 </div>
 
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-  <a href="https://github.com/ElSacho/Sport-website" target="_blank" rel="noopener noreferrer">
-    <span class="repository-name">La Compo (website)</span>
-  </a>
-</div>
 
 ### Authors
 

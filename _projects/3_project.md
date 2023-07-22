@@ -8,6 +8,12 @@ category: work
 ---
 # Orient Express Project
 
+<div class="repo p-2 text-center">
+  <a href="https://github.com/ElSacho/3D-Word">
+    <img class="repo-img-dark w-100" alt="Orient Express World" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=Sport-website&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  </a>
+</div>
+
 ## Compilation Instructions
 
 The project is written in C++ and uses the CGP library. Detailed steps for compiling this project can be found on the CGP website's compilation guide. Please follow the guide to ensure the proper setup of your project.

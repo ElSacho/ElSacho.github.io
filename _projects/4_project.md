@@ -9,8 +9,10 @@ category: work
 
 # HideOrJump
 
-<div class="repositories d-flex flex-wrap flex-md-row flex-column justify-content-between align-items-center">
-    {% include repository/repo.html repository="https://github.com/ElSacho/Sport-website" %}
+<div class="repo p-2 text-center">
+  <a href="https://github.com/ElSacho/HideOrJump">
+    <img class="repo-img-dark w-100" alt="Hide or Jump repo" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=Sport-website&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  </a>
 </div>
 
 
