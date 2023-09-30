@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-Finished second on the [hackathon from QuantumBlack](assets/img/quantumBlack.png)  !
+Finished second on an [hackathon from QuantumBlack](assets/img/quantumBlack.png)  !

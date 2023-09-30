@@ -3,7 +3,7 @@ layout: page
 title: A reinforcement learning overview
 description: Implementing RL technics on a self-made envirment
 img: assets/img/projects/hideOrJump/GIF_HoJ.gif
-importance: 1
+importance: 2
 category: work
 ---
 
@@ -11,7 +11,7 @@ category: work
 
 <div class="repo p-2 text-center">
   <a href="https://github.com/ElSacho/HideOrJump">
-    <img class="repo-img-dark w-100" alt="Hide or Jump repo" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=Sport-website&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+    <img class="repo-img-dark w-100" alt="Hide or Jump repo" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=HideOrJump&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
   </a>
 </div>
 

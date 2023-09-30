@@ -1,80 +1,39 @@
 ---
 layout: page
-title: project 5
-description: a project with a background image
-img: assets/img/1.jpg
-importance: 3
-category: fun
+title: On the stability of Deep Q-Learning
+description: Studying the ability of DQN to transfer knowledge from an environment to another one similar, without transfer learning.
+img: assets/img/projects/chaseTag/GIF_chaseTag.gif
+importance: 1
+category: work
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+# HideOrJump
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
-
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
-
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
+<div class="repo p-2 text-center">
+  <a href="https://github.com/ElSacho/World_Chase_Tag_project">
+    <img class="repo-img-dark w-100" alt="World Chase Tag Project" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=World_Chase_Tag_project&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+  </a>
 </div>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+## Find our report
+
+You can read the report we made of this project [here](/assets/pdf/INF581___Chase_tag.pdf)
+
+## Abstract 
+
+The goal of this project is to code a pygame environment where several agents will confront each other: on a discrete mesh of space, an agent of type "Cat" pursues an agent of type "Mouse". As soon as the cat catches the mouse, the game stops. The objective of this project is to successfully train adversary agents on complex boards, with walls and speed bumps for example, and then to study the stability of Deep Q-Learning algorithms by testing our agents on boards where we have rearranged the location of these special boxes.
 
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
+## Introduction
 
+This project involves the study of the adaptation of Deep Q-Learning networks in an interchangeable environment. What happens if we teach a mouse to escape from a cat on a board, and how does the cat adapt to the modification of the board, by moving walls or boxes that slow down the agents for example? 
 
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
+This aspect is interesting insofar as Deep Q-Learning, compared to classical Q-Learning, is supposed to react better to situations that it has never seen. Thus, we will study the reaction of two types of agents who discover new situations while they have been trained on similar but not identical situations. 
 
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+The challenges of this project are first to create a modular environment from scratch with PyGame \cite{TutoYoutube}, on which the players will be able to play with the board as they wish, and then to succeed in creating two agents who will compete on this board, and who will be able to progress with the appropriate methods. 
+
+This project is similar to the game "Frozen-Lake" in that an agent (the cat) must move to eat the mouse. The uncertainty of the movements of the agent of "Frozen-Lake" is replaced by the uncertainty of the movement of the objective (the mouse) and it is not possible for the cat to die if it goes on a bad square. Moreover, we want to train our agents with Deep-Q Learning compared to the Q-Learning methods usually used on "Frozen-Lake" to be able to test our agents on new boards. 
+
+So we recreated from scratch a game environment on which we trained our agents. Since this game is a winning game for the mouse given the implementation features, we can expect the mouse agent to constantly beat the cat. This is indeed what we observe on simple boards, and it remains true despite a slightly lower win rate on more complex boards. We also managed to create a cat agent that optimize all its moves on simple boards as it catches the mouse in a minimum number of moves when the mouse is immobile. Concerning the stability of the Deep Q-Learning methods, we draw two conclusions: on the one hand, training on a complex terrain still leads to a victory of the cat when we test our agents on simple terrains. On the other hand, on complex terrain most of the actions performed by the agents are good, but some observations still lead to sub-optimal decisions. 
+
+If we had more time, we would have tried to model several agents. For example, start with a single cat and several mice, and as soon as a mouse is touched it becomes a cat with it. This would have allowed us to observe possible group behavior, where several cats would have helped each other to block a mouse for example. Finally, we could have pushed the study of stability by performing transfer learning on new game boards.
