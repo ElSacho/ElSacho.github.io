@@ -10,7 +10,7 @@ category: work
 
 <div class="repo p-2 text-center">
   <a href="https://github.com/ElSacho/3D-Word">
-    <img class="repo-img-dark w-100" alt="Orient Express World" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=Sport-website&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
+    <img class="repo-img-dark w-100" alt="Orient Express World" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&repo=3D-Word&theme={{ site.repo_theme_dark }}&show_owner={{ show_owner }}">
   </a>
 </div>
 
