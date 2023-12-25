@@ -2,7 +2,7 @@
 layout: page
 title: A Random Mixture Model for Graphs
 description: Working on a Mixture Model for the edges of a graph
-img: assets/img/projects/ppgm/ppgm.gif
+img: assets/img/projects/ppgm/ppgm_sized.gif
 importance: 4
 category: work
 ---
