@@ -15,10 +15,10 @@ Traditional graph analysis methods predominantly focus on node degree to infer g
 
 The repository is the one we produced for our project on the paper : Franck Picard Daudin, J-J. and Stéphane Robin. (2008). A mixture model for random graphs.
 
-We did this project in the MVA course "Introduction to Probabilistic Graphical Models and Deep Generative Models", teached by P. Latouche, and P.A. Mattei, and with R. Khellaf as Teaching Assistant.
+We did this project in the MVA course "Introduction to Probabilistic Graphical Models and Deep Generative Models", teached by P. Latouche, and P.A. Mattei, and with R. Khellaf as Teaching Assistant. You can read the report we made of this project [here](assets/pdf/PPGM_Report.pdf)
 
 <p align="center">
-  <img src="assets/img/projects/ppgm/ppgm.gif" alt="4clustersexample_gif" width="50%" height="auto">
+  <img src="/assets/img/projects/ppgm/ppgm.gif" alt="4clustersexample_gif" width="50%" height="auto">
   <br>
   <em>Example of the reordered adjency matrix with as the ERMG model converges</em>
 </p>
