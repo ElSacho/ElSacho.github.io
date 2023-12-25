@@ -2,7 +2,7 @@
 layout: page
 title: Traveling Salesman Problem
 description: A report on a research paper, and implementing a new RL based technique.
-img: assets/img/projects/TSP/s20.png
+img: assets/img/projects/TSP/tsp.gif
 importance: 1
 category: work
 ---
