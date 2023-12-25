@@ -80,7 +80,7 @@ def create_gif_from_video(video_path, output_name, pixel_size_w, pixel_size_h, t
                    save_all=True, append_images=images[1:], optimize=False, duration=frame_duration, loop=0)
 
 
-def create_gif_from_gif(gif_path, output_name, pixel_size_w = 680, pixel_size_h = 420, length_last_frame = 10):
+def create_gif_from_gif(gif_path, output_name, pixel_size_w = 680, pixel_size_h = 420, length_last_frame = 18):
     """
     Opens a GIF, resizes it while maintaining aspect ratio, adds black borders if necessary,
     and adjusts the duration of the last frame.
@@ -111,15 +111,18 @@ def create_gif_from_gif(gif_path, output_name, pixel_size_w = 680, pixel_size_h 
             frames.append(bordered_frame)
 
         # Modify the duration of the last frame
-        frame_durations = [img.info['duration'] for _ in frames[:-1]]
-        frame_durations.append(img.info['duration'] * length_last_frame)
+        # frame_durations = [img.info['duration'] for _ in frames[:-1]]
+        # frame_durations.append(img.info['duration'] * length_last_frame)
+        frame_duration_per_frame = 130
+        frame_durations = [frame_duration_per_frame for _ in frames[:-1]]
+        frame_durations.append(frame_duration_per_frame * length_last_frame)
 
         # Save the modified frames as a new GIF
         frames[0].save(output_name, save_all=True, append_images=frames[1:], duration=frame_durations, loop=0)
 
 
 # Example usage
-create_gif_from_gif('create_gif/gif_example.gif', 'create_gif/ppgm.gif')
+create_gif_from_gif('assets/img/projects/ppgm/ppgm.gif', 'create_gif/ppgm.gif')
 
 
 
