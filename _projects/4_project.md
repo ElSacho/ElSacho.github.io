@@ -3,7 +3,7 @@ layout: page
 title: A reinforcement learning overview
 description: Implementing RL technics on a self-made envirment
 img: assets/img/projects/hideOrJump/GIF_HoJ.gif
-importance: 2
+importance: 5
 category: work
 ---
 

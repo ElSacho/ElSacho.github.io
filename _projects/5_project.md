@@ -3,7 +3,7 @@ layout: page
 title: On the stability of Deep Q-Learning
 description: Studying the ability of DQN to transfer knowledge from an environment to another one similar, without transfer learning.
 img: assets/img/projects/chaseTag/GIF_chaseTag.gif
-importance: 1
+importance: 2
 category: work
 ---
 

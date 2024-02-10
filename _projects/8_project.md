@@ -3,7 +3,7 @@ layout: page
 title: Molecule Retrieval 
 description: Molecule Retrieval with text queries
 img: assets/img/projects/molecule_retrieval/GIF1.gif
-importance: 3
+importance: 4
 category: work
 ---
 
