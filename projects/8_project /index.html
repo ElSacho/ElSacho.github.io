@@ -10,10 +10,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Announcement_1 | Sacha  Braun</title>
+    <title>A Random Mixture Model for Graphs | Sacha  Braun</title>
     <meta name="author" content="Sacha  Braun">
-    <meta name="description" content="A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
-">
+    <meta name="description" content="Working on a Mixture Model for the edges of a graph">
     <meta name="keywords" content="jekyll, jekyll-theme, academic-website, portfolio-website">
 
 
@@ -39,7 +38,7 @@
     <link rel="shortcut icon" href="data:image/svg+xml,&lt;svg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20100%20100%22&gt;&lt;text%20y=%22.9em%22%20font-size=%2290%22&gt;%E2%9A%9B%EF%B8%8F&lt;/text&gt;&lt;/svg&gt;">
     
     <link rel="stylesheet" href="/assets/css/main.css">
-    <link rel="canonical" href="https://elsacho.github.io/news/announcement_1/">
+    <link rel="canonical" href="https://elsacho.github.io/projects/8_project%20/">
 
     <!-- Dark Mode -->
     
@@ -113,27 +112,70 @@
     <!-- Content -->
     <div class="container mt-5">
       
-        <!-- _layouts/post.html -->
+        <!-- page.html -->
+        <div class="post">
 
-<div class="post">
+          <header class="post-header">
+            <h1 class="post-title">A Random Mixture Model for Graphs</h1>
+            <p class="post-description">Working on a Mixture Model for the edges of a graph</p>
+          </header>
 
-  <header class="post-header">
-    <h1 class="post-title">Announcement_1</h1>
-    <p class="post-meta">July 15, 2020</p>
-    <p class="post-tags">
-      <a href="/blog/2020"> <i class="fas fa-calendar fa-sm"></i> 2020 </a>
+          <article>
+            <h1 id="nlp_molecule_retrieval">NLP_Molecule_Retrieval</h1>
 
-    </p>
-  </header>
+<h2 id="overview">Overview</h2>
+<p>This project lies at the intersection of Natural Language Processing (NLP) and cheminformatics, aiming to bridge the gap between textual descriptions and molecular structures represented as graphs. By leveraging advanced machine learning techniques, specifically contrastive learning, we developed models capable of accurately matching molecules to their corresponding textual descriptions. Our approach involves co-training a text encoder and a molecule encoder to align similar text-molecule pairs in a shared representation space, achieving significant precision improvements with an LRAP score of over 0.94 on the test dataset.</p>
 
-  <article class="post-content">
-    
-    <div id="markdown-content">
-      <p>BIG NEWS ! I have been accepted at the École Polytechnique and the ENS Ulm.</p>
+<p align="center">
+  <img src="figures/GIF1.gif" alt="overviewMoleculeRetrieval" width="50%" height="auto">
+  <br>
+  <em>Overview of the text query molecule retrieval goal</em>
+</p>
 
-    </div>
-  </article>
+<p>The repository is the one we produced for our Kaagle project Molecule Retrieval with Natural Language Queries, from the Altegrad course of the MVA 2023-2024 (https://www.kaggle.com/competitions/altegrad-2023-data-challenge).</p>
+
+<p>You can read the report we made of this project <a href="/assets/pdf/Report_Altegrad.pdf">here</a></p>
+
+<div class="repo p-2 text-center">
+  <a href="https://github.com/ElSacho/NLP_Molecule_Retrieval" rel="external nofollow noopener" target="_blank">
+    <img class="repo-img-dark w-100" alt="TSP" src="https://github-readme-stats.vercel.app/api/pin/?username=ElSacho&amp;repo=NLP_Molecule_Retrieval&amp;theme=dark&amp;show_owner=">
+  </a>
 </div>
+
+<h2 id="introduction">Introduction</h2>
+<p>The challenge of accurately matching molecular structures with textual descriptions presents a unique intersection of NLP and molecular science. Our project explores this novel area by developing methods that employ contrastive learning to effectively co-train text and molecule encoders, thus facilitating the identification of corresponding molecules for given text queries. This is achieved despite the absence of direct textual information about the molecules, highlighting the potential of our models to navigate the complex relationship between language and molecular graphs. Our models’ effectiveness is quantified through the Label Ranking Average Precision (LRAP) score, demonstrating their capability to achieve high accuracy in molecule retrieval.</p>
+
+<h2 id="key-features">Key Features</h2>
+<ul>
+  <li>
+<strong>Contrastive Learning:</strong> Utilizes contrastive loss, triplet loss, and Lifted Structured Loss to learn effective representations by contrasting similar and dissimilar pairs of data points.</li>
+  <li>
+<strong>Boosting Strategies:</strong> Incorporates methods inspired by boosting and a genetic algorithm-inspired strategy to enhance model diversity and performance.</li>
+  <li>
+<strong>High LRAP Scores:</strong> Achieves an LRAP score of 0.90 with our initial approach and over 0.94 with our refined boosting strategies on the test dataset.</li>
+  <li>
+<strong>Comprehensive Model Comparison:</strong> Conducts extensive experiments with over 70 different hyperparameters to identify the most impactful configurations.</li>
+</ul>
+
+<h2 id="getting-started">Getting Started</h2>
+<p>To run the code, follow these steps:</p>
+<ol>
+  <li>
+<strong>Install Requirements:</strong> Install the necessary requirements by running <code class="language-plaintext highlighter-rouge">pip install -r requirements.txt</code>.</li>
+  <li>
+<strong>Prepare the Dataset:</strong> Separate the validation dataset similarly to the test dataset (only if you want to see some features for the boosting strategy)</li>
+  <li>
+<strong>Configuration:</strong> Choose a configuration file and run the model by executing <code class="language-plaintext highlighter-rouge">python trainer.py path_to_your_conf_file</code>. Make sure to set the experiment name, whether to load an existing model, and the save names for your models and CSV files in the config file.</li>
+  <li>
+<strong>Fine tuning</strong> if you want to fine tune your data, you can use the <code class="language-plaintext highlighter-rouge">python fine_train.py path_to_your_conf_file</code> command, that wile create the new dataset from the model you placed as input in the config file, and fine tune the graph model on this specific task.</li>
+  <li>
+<strong>Aggregation</strong> You can aggregate the results you get from each file by placing the csv files in one folder, and running the aggregation function you want (in the <code class="language-plaintext highlighter-rouge">aggregate_csv.py</code> file), making sure you give the path to your csv folder as input.</li>
+</ol>
+
+
+          </article>
+
+        </div>
 
       
     </div>
@@ -141,7 +183,7 @@
     <!-- Footer -->    
     <footer class="fixed-bottom">
       <div class="container mt-0">
-        © Copyright 2023 Sacha  Braun. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
+        © Copyright 2024 Sacha  Braun. Powered by <a href="https://jekyllrb.com/" target="_blank" rel="external nofollow noopener">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" rel="external nofollow noopener" target="_blank">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="external nofollow noopener">GitHub Pages</a>.
 
       </div>
     </footer>
