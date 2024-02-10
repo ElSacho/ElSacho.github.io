@@ -1,8 +1,8 @@
 ---
 layout: page
-title: A Random Mixture Model for Graphs
-description: Working on a Mixture Model for the edges of a graph
-img: assets/img/projects/ppgm/ppgm_sized.gif
+title: Molecule Retrieval 
+description: Molecule Retrieval with text queries
+img: assets/img/projects/molecule_retrieval/GIF1.gif
 importance: 3
 category: work
 ---
@@ -13,7 +13,7 @@ category: work
 This project lies at the intersection of Natural Language Processing (NLP) and cheminformatics, aiming to bridge the gap between textual descriptions and molecular structures represented as graphs. By leveraging advanced machine learning techniques, specifically contrastive learning, we developed models capable of accurately matching molecules to their corresponding textual descriptions. Our approach involves co-training a text encoder and a molecule encoder to align similar text-molecule pairs in a shared representation space, achieving significant precision improvements with an LRAP score of over 0.94 on the test dataset.
 
 <p align="center">
-  <img src="figures/GIF1.gif" alt="overviewMoleculeRetrieval" width="50%" height="auto">
+  <img src="assets/img/projects/molecule_retrieval/GIF1.gif" alt="overviewMoleculeRetrieval" width="50%" height="auto">
   <br>
   <em>Overview of the text query molecule retrieval goal</em>
 </p>
