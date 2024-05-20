@@ -1,8 +1,8 @@
 ---
 layout: post
-date: 2023-02-09 15:59:00-0400
+date: 2024-04-02 15:59:00-0400
 inline: true
 related_posts: false
 ---
 
-Finished second on the hackathon from BCG Gamma !
+I started my internship under the supervision of Michael I. Jordan and Francis Bach ! I will work on uncertainty quantification. 

@@ -19,7 +19,7 @@ social: true  # includes social icons at the bottom of the page
 
 Hi !
 
-I'm a fourth and final year student at École Polytechnique (X2020). For my last year, I am attending a master degree from ENS Paris-Saclay in mathematics, vision and machine learning (MVA). I have a particular interest in Reinforcement Learning and Bandit theory.
+I'm a fourth and final year student at École Polytechnique (X2020). For my last year, I am attending a master degree from ENS Paris-Saclay in mathematics, vision and machine learning (MVA). I am currently an intern under the supervision of Francis Bach and Michael I. Jordan at INRIA. 
 
 Since popularizing science has helped me develop an appetence for the sciences, I want to develop popularization videos on Machine Learning topics that are accessible to all levels. I'm currently working on a series aimed at making the [AlphaZero](https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf) algorithm understandable to everyone.
 
