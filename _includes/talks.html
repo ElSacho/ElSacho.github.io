@@ -1,4 +1,4 @@
-          <div class="talks">
+          <div class="news">
             {% if site.talks != blank -%}
             {%- assign talks_size = site.talks | size -%}
             <div class="table-responsive" {% if include.limit and site.talksannouncements.scrollable and talks_size > 3 %}style="max-height: 60vw"{% endif %}>
@@ -16,7 +16,7 @@
                     {% if item.inline -%}
                       {{ item.content | remove: '<p>' | remove: '</p>' | emojify }}
                     {%- else -%}
-                      <a class="talks-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
+                      <a class="news-title" href="{{ item.url | relative_url }}">{{ item.title }}</a>
                     {%- endif %}
                   </td>
                 </tr>
