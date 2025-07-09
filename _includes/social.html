@@ -37,6 +37,9 @@
             {%- if site.linkedin_username -%}
             <a href="https://www.linkedin.com/in/{{ site.linkedin_username }}" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
             {% endif %}
+            {%- if site.bsky_username -%}
+            <a href="https://https://bsky.app/profile/{{ site.bsky_username }}" title="Bluesky"><i class="fab fa-bluesky"></i></a>
+            {% endif %}
             {%- if site.twitter_username -%}
             <a href="https://twitter.com/{{ site.twitter_username }}" title="Twitter"><i class="fab fa-twitter"></i></a>
             {% endif %}
