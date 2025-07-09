@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Inria (Sierra) firstname.lastname '@' inria.fr
+subtitle: Inria (Sierra)  |  firstname.lastname '@' inria.fr
 
 profile:
   align: right
