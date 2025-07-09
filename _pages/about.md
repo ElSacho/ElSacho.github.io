@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Ecole Polytechnique | MVA 
+subtitle: Inria (Sierra) firstname.lastname '@' inria.fr
 
 profile:
   align: right

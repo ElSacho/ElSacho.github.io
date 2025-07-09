@@ -75,7 +75,7 @@ gitlab_username: # your GitLab user name
 twitter_username: PotoSacho
 mastodon_username: # your mastodon instance+username in the format instance.tld/@username
 linkedin_username: sacha-braun
-bsky_username: potosacho.bsky.social
+# bsky_username: potosacho.bsky.social
 telegram_username: # your Telegram user name
 scholar_userid: xVc91rsAAAAJ&hl=fr&oi=ao
 semanticscholar_id: # your Semantic Scholar ID
