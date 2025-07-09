@@ -13,13 +13,13 @@ profile:
 
 news: true  # includes a list of news items
 latest_posts: false  # includes a list of the newest posts
-selected_papers: false # includes a list of papers marked as "selected={true}"
+selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
 Hi !
 
-I'm a fourth and final year student at École Polytechnique (X2020). For my last year, I am attending a master degree from ENS Paris-Saclay in mathematics, vision and machine learning (MVA). I am currently an intern under the supervision of Francis Bach and Michael I. Jordan at INRIA. 
+I am a first year PhD student under the supervision of Francis Bach and Michael I. Jordan at INRIA (Sierra, Paris). I work on uncertainty quantification, with a strong interest in conformal prediction. 
 
 Since popularizing science has helped me develop an appetence for the sciences, I want to develop popularization videos on Machine Learning topics that are accessible to all levels. I'm currently working on a series aimed at making the [AlphaZero](https://discovery.ucl.ac.uk/id/eprint/10045895/1/agz_unformatted_nature.pdf) algorithm understandable to everyone.
 
