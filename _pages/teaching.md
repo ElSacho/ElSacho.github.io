@@ -2,10 +2,12 @@
 layout: page
 permalink: /teaching/
 title: Teaching
-description: I do not teach per se, but I have another website where you can find more than 60 mathematics videos
+description: 
 nav: true
 nav_order: 5
 ---
+
+I have been assistant professor for the course [Convex Optimization](https://www.di.ens.fr/~aspremon/OptConvexeM2.html) at the MVA given by Alexandre d'Aspremont & Adrien Taylor.
 
 You can see my other website [here](https://sachauniwebe.wixsite.com/website), and check my youtube account [here](https://www.youtube.com/@uniwebebraun5130). 
 
