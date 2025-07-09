@@ -5,4 +5,4 @@ inline: true
 related_posts: false
 ---
 
-The [Surfing the Ocean Seminar](https://oceanerc.com/seminar/). Find the [talk here](https://www.youtube.com/watch?v=ALL5b4uoAFQ)
+The [Surfing the Ocean Seminar](https://oceanerc.com/seminar/). Find the [talk here](https://www.youtube.com/watch?v=ALL5b4uoAFQ).
