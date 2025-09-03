@@ -28,5 +28,31 @@ demonstrated in our experiments on real-world datasets.},
   preview={mvcs_preview.png},
 }
 
-
+@article{braun2025multivariate,
+  title={Multivariate Conformal Prediction via Conformalized Gaussian Scoring},
+  author={Braun, Sacha and Berta, Eugène and Jordan, Michael I and Bach, Francis},
+  abstract={While achieving exact conditional coverage in conformal prediction is unattainable without
+   making strong, untestable regularity assumptions, the promise of conformal prediction hinges
+    on finding approximations to conditional guarantees that are realizable in practice. A promising 
+    direction for obtaining conditional dependence for conformal sets--in particular capturing 
+    heteroskedasticity--is through estimating the conditional density ℙY|X and conformalizing its
+     level sets. Previous work in this vein has focused on nonconformity scores based on the empirical 
+     cumulative distribution function (CDF). Such scores are, however, computationally costly, typically
+      requiring expensive sampling methods. To avoid the need for sampling, we observe that the CDF-based
+       score reduces to a Mahalanobis distance in the case of Gaussian scores, yielding a closed-form 
+       expression that can be directly conformalized. Moreover, the use of a Gaussian-based score opens
+        the door to a number of extensions of the basic conformal method; in particular, we show how to
+         construct conformal sets with missing output values, refine conformal sets as partial information
+          about Y becomes available, and construct conformal sets on transformations of the output space. 
+          Finally, empirical results indicate that our approach produces conformal sets that more closely 
+          approximate conditional coverage in multivariate settings compared to alternative methods.},
+  journal={arXiv preprint arXiv:2507.20941},
+  html={https://arxiv.org/abs/2507.20941},
+  url={https://arxiv.org/abs/2507.20941},
+  selected={true},
+  pdf={gaussian_scoring_article.pdf},
+  code={https://github.com/ElSacho/Gaussian_Conformal_Prediction},
+  preview={gaussian_scoring_preview.png},
+  year={2025}
+}
 
