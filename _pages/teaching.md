@@ -7,6 +7,7 @@ nav: true
 nav_order: 5
 ---
 
+I am responsible of the course [Introduction aux probabilités et théorie de la mesure](/teaching/measure/) from the CPES class.  
 
 I have been assistant professor for the course [Convex Optimization](https://www.di.ens.fr/~aspremon/OptConvexeM2.html) at the MVA given by Alexandre d'Aspremont & Adrien Taylor.
 
