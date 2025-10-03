@@ -15,7 +15,9 @@ description:
 <h2>Support de cours</h2>
 <ul>
   <li><a href="/assets/courses/measure/polycopie.pdf" target="_blank">Polycopié (sans preuves)</a></li>
+  <li><a href="/assets/courses/measure/polycopie_with_proofs.pdf" target="_blank">Polycopié (avec preuves)</a></li>
   <li><a href="/assets/courses/measure/TD1.pdf" target="_blank">TD1</a></li>
+  <li><a href="/assets/courses/measure/TD2.pdf" target="_blank">TD2</a></li>
 </ul>
 
 <h2>Contenu</h2>
