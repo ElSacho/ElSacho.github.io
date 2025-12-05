@@ -20,6 +20,7 @@ description:
   <li><a href="/assets/courses/measure/polycopie_with_proofs_old.pdf" target="_blank">Polycopié (avec preuves) - Ancienne version</a></li>
   <li><a href="/assets/courses/measure/TD1.pdf" target="_blank">TD1</a></li>
   <li><a href="/assets/courses/measure/TD2.pdf" target="_blank">TD2</a></li>
+  <li><a href="/assets/courses/measure/TD3.pdf" target="_blank">TD3</a></li>
   <li><a href="/assets/courses/measure/partiel.pdf" target="_blank">Examen de mi-parcours</a></li>
   <li><a href="/assets/courses/measure/partiel_corr.pdf" target="_blank">Examen de mi-parcours corrigé</a></li>
 </ul>
