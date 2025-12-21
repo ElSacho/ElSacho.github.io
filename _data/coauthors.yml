@@ -1,10 +1,4 @@
 "Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
-
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
-
   - firstname: ["Francis", "F."]
     url: https://www.di.ens.fr/~fbach/
 
@@ -19,3 +13,7 @@
 "Aolaritei":
   - firstname: ["Liviu", 'L."]']
     url: https://sites.google.com/view/liviu-aolaritei/home
+
+"Holzmüller":
+  - firstname: ["David", 'D."]']
+    url: https://dholzmueller.github.io
