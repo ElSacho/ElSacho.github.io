@@ -22,10 +22,9 @@ mal prediction methods. Finally, we release an open-source package for ERT as we
 conditional coverage metrics. Together, these contributions provide a new lens for understanding,
 diagnosing, and improving the conditional reliability of predictive systems.},
   journal={arXiv preprint arXiv:2512.11779},
-  html={https://arxiv.org/abs/2512.11779},
   url={https://arxiv.org/abs/2512.11779},
   selected={true},
-  pdf={ERT.pdf},
+  pdf={https://arxiv.org/abs/2512.11779},
   code={https://github.com/ElSacho/covmetrics},
   preview={ERT_preview.gif},
   year={2025}
@@ -33,30 +32,26 @@ diagnosing, and improving the conditional reliability of predictive systems.},
 
 
 @article{braun2025multivariate,
-  title={Multivariate Conformal Prediction via Conformalized Gaussian Scoring},
+  title={Multivariate Standardized Residuals for Conformal Prediction},
   author={Braun, Sacha and Berta, Eugène and Jordan, Michael I and Bach, Francis},
-  abstract={While achieving exact conditional coverage in conformal prediction is unattainable without
-   making strong, untestable regularity assumptions, the promise of conformal prediction hinges
-    on finding approximations to conditional guarantees that are realizable in practice. A promising 
-    direction for obtaining conditional dependence for conformal sets--in particular capturing 
-    heteroskedasticity--is through estimating the conditional density ℙY|X and conformalizing its
-     level sets. Previous work in this vein has focused on nonconformity scores based on the empirical 
-     cumulative distribution function (CDF). Such scores are, however, computationally costly, typically
-      requiring expensive sampling methods. To avoid the need for sampling, we observe that the CDF-based
-       score reduces to a Mahalanobis distance in the case of Gaussian scores, yielding a closed-form 
-       expression that can be directly conformalized. Moreover, the use of a Gaussian-based score opens
-        the door to a number of extensions of the basic conformal method; in particular, we show how to
-         construct conformal sets with missing output values, refine conformal sets as partial information
-          about Y becomes available, and construct conformal sets on transformations of the output space. 
-          Finally, empirical results indicate that our approach produces conformal sets that more closely 
-          approximate conditional coverage in multivariate settings compared to alternative methods.},
+  abstract={While split conformal prediction guarantees marginal coverage, approaching the stronger property of conditional coverage is essential for reliable uncertainty quantification. Naive conformal
+scores, however, suffer from poor conditional coverage in heteroskedastic settings. In univariate
+regression, this is commonly addressed by normalizing nonconformity scores using estimated local
+score variance. In this work, we propose a natural extension of this normalization to the multivariate setting, effectively whitening the residuals to decouple output correlations and standardize
+local variance. We demonstrate that using the Mahalanobis distance induced by a learned local
+covariance as a nonconformity score provides a closed-form, computationally efficient mechanism for
+capturing inter-output correlations and heteroskedasticity, avoiding the expensive sampling required
+by previous methods based on cumulative distribution functions. This structure unlocks several
+practical extensions, including the handling of missing output values, the refinement of conformal
+sets when partial information is revealed, and the construction of valid conformal sets for transformations of the output. Finally, we provide extensive empirical evidence on both synthetic and
+real-world datasets showing that our approach yields conformal sets that significantly improve upon
+the conditional coverage of existing multivariate baselines.},
   journal={arXiv preprint arXiv:2507.20941},
-  html={https://arxiv.org/abs/2507.20941},
   url={https://arxiv.org/abs/2507.20941},
   selected={true},
-  pdf={gaussian_scoring_article.pdf},
-  code={https://github.com/ElSacho/Gaussian_Conformal_Prediction},
-  preview={gaussian_scoring_preview.png},
+  pdf={https://arxiv.org/abs/2507.20941},
+  code={https://github.com/ElSacho/Multivariate_Standardized_Residuals},
+  preview={3D_plot_exponential.png},
   year={2025}
 }
 
@@ -79,9 +74,8 @@ demonstrated in our experiments on real-world datasets.},
   journal={arXiv preprint arXiv:2503.19068},
   year={2025},
   url={https://arxiv.org/abs/2503.19068},
-  html={https://arxiv.org/abs/2503.19068},
   selected={true},
-  pdf={mvcs_article.pdf},
+  pdf={https://arxiv.org/abs/2503.19068},
   poster={mvcs_poster.pdf},
   code={https://github.com/ElSacho/MVCS},
   preview={mvcs_preview.png},
