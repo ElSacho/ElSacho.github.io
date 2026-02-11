@@ -200,8 +200,7 @@
           <!-- Links/Buttons -->
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="https://arxiv.org/abs/2512.11779" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
-            <a href="/assets/pdf/ERT.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="https://arxiv.org/abs/2512.11779" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
             <a href="https://github.com/ElSacho/covmetrics" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
           </div>
           
@@ -241,7 +240,7 @@ diagnosing, and improving the conditional reliability of predictive systems.</p>
     
 
     <!-- Fallback to the original file -->
-    <img src="/assets/img/publication_preview/gaussian_scoring_preview.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="gaussian_scoring_preview.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
+    <img src="/assets/img/publication_preview/3D_plot_exponential.png" class="preview z-depth-1 rounded" width="auto" height="auto" alt="3D_plot_exponential.png" onerror="this.onerror=null; $('.responsive-img-srcset').remove();">
 
   </picture>
 
@@ -251,7 +250,7 @@ diagnosing, and improving the conditional reliability of predictive systems.</p>
         <!-- Entry bib key -->
         <div id="braun2025multivariate" class="col-sm-8">
         <!-- Title -->
-        <div class="title">Multivariate Conformal Prediction via Conformalized Gaussian Scoring</div>
+        <div class="title">Multivariate Standardized Residuals for Conformal Prediction</div>
         <!-- Author -->
         <div class="author">
         
@@ -272,9 +271,8 @@ diagnosing, and improving the conditional reliability of predictive systems.</p>
           <!-- Links/Buttons -->
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="https://arxiv.org/abs/2507.20941" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
-            <a href="/assets/pdf/gaussian_scoring_article.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
-            <a href="https://github.com/ElSacho/Gaussian_Conformal_Prediction" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
+            <a href="https://arxiv.org/abs/2507.20941" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
+            <a href="https://github.com/ElSacho/Multivariate_Standardized_Residuals" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
           </div>
           
           <div class="badges">
@@ -284,21 +282,18 @@ diagnosing, and improving the conditional reliability of predictive systems.</p>
 
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
-            <p>While achieving exact conditional coverage in conformal prediction is unattainable without
-   making strong, untestable regularity assumptions, the promise of conformal prediction hinges
-    on finding approximations to conditional guarantees that are realizable in practice. A promising 
-    direction for obtaining conditional dependence for conformal sets–in particular capturing 
-    heteroskedasticity–is through estimating the conditional density ℙY|X and conformalizing its
-     level sets. Previous work in this vein has focused on nonconformity scores based on the empirical 
-     cumulative distribution function (CDF). Such scores are, however, computationally costly, typically
-      requiring expensive sampling methods. To avoid the need for sampling, we observe that the CDF-based
-       score reduces to a Mahalanobis distance in the case of Gaussian scores, yielding a closed-form 
-       expression that can be directly conformalized. Moreover, the use of a Gaussian-based score opens
-        the door to a number of extensions of the basic conformal method; in particular, we show how to
-         construct conformal sets with missing output values, refine conformal sets as partial information
-          about Y becomes available, and construct conformal sets on transformations of the output space. 
-          Finally, empirical results indicate that our approach produces conformal sets that more closely 
-          approximate conditional coverage in multivariate settings compared to alternative methods.</p>
+            <p>While split conformal prediction guarantees marginal coverage, approaching the stronger property of conditional coverage is essential for reliable uncertainty quantification. Naive conformal
+scores, however, suffer from poor conditional coverage in heteroskedastic settings. In univariate
+regression, this is commonly addressed by normalizing nonconformity scores using estimated local
+score variance. In this work, we propose a natural extension of this normalization to the multivariate setting, effectively whitening the residuals to decouple output correlations and standardize
+local variance. We demonstrate that using the Mahalanobis distance induced by a learned local
+covariance as a nonconformity score provides a closed-form, computationally efficient mechanism for
+capturing inter-output correlations and heteroskedasticity, avoiding the expensive sampling required
+by previous methods based on cumulative distribution functions. This structure unlocks several
+practical extensions, including the handling of missing output values, the refinement of conformal
+sets when partial information is revealed, and the construction of valid conformal sets for transformations of the output. Finally, we provide extensive empirical evidence on both synthetic and
+real-world datasets showing that our approach yields conformal sets that significantly improve upon
+the conditional coverage of existing multivariate baselines.</p>
           </div>
         </div>
       </div>
@@ -344,8 +339,7 @@ diagnosing, and improving the conditional reliability of predictive systems.</p>
           <!-- Links/Buttons -->
           <div class="links">
             <a class="abstract btn btn-sm z-depth-0" role="button">Abs</a>
-            <a href="https://arxiv.org/abs/2503.19068" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">HTML</a>
-            <a href="/assets/pdf/mvcs_article.pdf" class="btn btn-sm z-depth-0" role="button">PDF</a>
+            <a href="https://arxiv.org/abs/2503.19068" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">PDF</a>
             <a href="https://github.com/ElSacho/MVCS" class="btn btn-sm z-depth-0" role="button" rel="external nofollow noopener" target="_blank">Code</a>
             <a href="/assets/pdf/mvcs_poster.pdf" class="btn btn-sm z-depth-0" role="button">Poster</a>
           </div>
@@ -411,7 +405,7 @@ demonstrated in our experiments on real-world datasets.</p>
 
   <p>📌 
     My <a href="https://arxiv.org/abs/2507.20941" target="_blank" rel="external nofollow noopener">second paper</a> is now available!  
-    We conformalize the level sets of densities to get flexible conformal sets. It allows to deal with missing outputs for instance.  
+    We learn a local covariance estimation in multivariate regression to generalize the standardized residuals. It improves conditional coverage, allows to deal with missing outputs and fancier transformation of the outputs.
     <br><em>July 28, 2025</em>
   </p>
 
