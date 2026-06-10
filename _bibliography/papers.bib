@@ -3,15 +3,60 @@
 
 @string{aps = {American Physical Society,}}
 
+@article{braun2026super,
+  title={Super-Level-Set Regression: Conditional Quantiles via Volume Minimization},
+  author={Braun, Sacha and Jordan, Michael I and Bach, Francis},
+  abstract={Constructing minimum-volume prediction regions that satisfy conditional coverage is a
+   fundamental challenge in multivariate regression. Standard approaches rely on explicitly estimating
+    the full conditional density and subsequently thresholding it. This two-step plug-in process is 
+    notoriously difficult, sensitive to estimation errors, and computationally expensive. One would like 
+    to instead optimize the region directly. Formulating a direct solution is challenging, however, 
+    because it requires minimizing a volume objective that is coupled with the conditional quantiles 
+    of the model's own estimation error. In this work, we  address this challenge. We introduce 
+    \emph{super-level-set regression} (SLS), a novel mathematical framework that successfully resolves 
+    this implicit coupling, allowing us to directly parameterize and optimize the geometric boundaries 
+    of the target conditional level sets. By bypassing full distribution estimation and leveraging 
+    flexible volume-preserving frontier functions, our approach natively captures complex, multimodal, 
+    and disjoint conditional structures end-to-end. Ultimately, SLS offers a new perspective on 
+    multivariate conditional quantile regression, replacing the restrictive assumptions of density-first
+     methods with a direct geometric optimization strategy.
+},
+  journal={arXiv preprint arXiv:2605.06210},
+  url={https://arxiv.org/abs/2605.06210},
+  selected={true},
+  pdf={https://arxiv.org/abs/2605.06210},
+  code={https://github.com/ElSacho/super_level_sets_regression},
+  preview={grille_finale_low_quality.gif},
+  year={2026}
+}
+
+@article{berta2026variational,
+  title={A Variational Estimator for Lp Calibration Errors},
+  author={Berta*, Eugène and Braun*, Sacha and Holzmüller* David and Jordan, Michael I and Bach, Francis},
+  abstract={Calibration—the problem of ensuring that predicted probabilities align with observed class frequencies—is a basic desideratum for reliable prediction with machine learning systems.
+Calibration error is traditionally assessed via a divergence function, using the expected divergence between predictions and empirical frequencies. Accurately estimating this quantity is challenging, especially in the multiclass setting.
+Here, we show how to extend a recent variational framework for estimating calibration errors beyond divergences induced induced by proper losses, to cover a broad class of calibration errors induced by $L_p$ divergences.
+Our method can separate over- and under-confidence and, unlike non-variational approaches, avoids overestimation.
+We provide extensive experiments and integrate our code in the open-source package \texttt{probmetrics}\footnote{\url{https://github.com/probkit/probmetrics}} for evaluating calibration errors.},
+  journal={AISTATS 2026 workshop "Towards Trustworthy Predictions: Theory and Applications of Calibration for Modern AI"},
+  url={https://arxiv.org/abs/2602.24230},
+  selected={false},
+  pdf={https://arxiv.org/abs/2602.24230},
+  code={https://github.com/probkit/probmetrics},
+  preview={synthetic_multi_L2_d=3.pdf},
+  year={2026}
+}
+
+
 @article{braun2025conditional,
   title={Conditional Coverage Diagnostics for Conformal Prediction},
   author={Braun, Sacha and Holzmüller David and Jordan, Michael I and Bach, Francis},
   abstract={Evaluating conditional coverage remains one of the most persistent challenges in assessing the
-reliabilityofpredictivesystems. Althoughconformalmethodscangiveguaranteesonmarginalcover-
-age, no method canguarantee to produce sets with correct conditional coverage, leaving practitioners
+reliability of predictive systems. Although conformal methods can give guarantees on marginal coverage, 
+no method canguarantee to produce sets with correct conditional coverage, leaving practitioners
 without a clear way to interpret local deviations. To overcome sample-inefficiency and overfitting
 issues of existing metrics, we cast conditional coverage estimation as a classification problem. Condi-
-tional coverage is violated if and only if any classifier can achieve lower risk than the target coverage.
+tional coverage is violated if and only if some classifier can achieve lower risk than the target coverage.
 Through the choice of a (proper) loss function, the resulting risk difference gives a conservative
 estimate of natural miscoverage measures such as L1 and L2 distance, and can even separate the
 effects of over- and under-coverage, as well as handle non-constant target coverages. We call the
@@ -21,13 +66,13 @@ established metrics like CovGap. Additionally, we use our metric to benchmark di
 mal prediction methods. Finally, we release an open-source package for ERT as well as previous
 conditional coverage metrics. Together, these contributions provide a new lens for understanding,
 diagnosing, and improving the conditional reliability of predictive systems.},
-  journal={arXiv preprint arXiv:2512.11779},
+  journal={International Conference on Machine Learning (ICML)},
   url={https://arxiv.org/abs/2512.11779},
   selected={true},
   pdf={https://arxiv.org/abs/2512.11779},
   code={https://github.com/ElSacho/covmetrics},
   preview={ERT_preview.gif},
-  year={2025}
+  year={2026}
 }
 
 
@@ -48,7 +93,7 @@ real-world datasets showing that our approach yields conformal sets that signifi
 the conditional coverage of existing multivariate baselines.},
   journal={arXiv preprint arXiv:2507.20941},
   url={https://arxiv.org/abs/2507.20941},
-  selected={true},
+  selected={false},
   pdf={https://arxiv.org/abs/2507.20941},
   code={https://github.com/ElSacho/Multivariate_Standardized_Residuals},
   preview={3D_plot_exponential.png},
@@ -71,8 +116,8 @@ approach optimizes over prediction sets defined by arbitrary norm balls—includ
 norm formulations. Additionally, by jointly optimizing both the predictive model and predictive
 uncertainty, we obtain prediction sets that are tight, informative, and computationally efficient, as
 demonstrated in our experiments on real-world datasets.},
-  journal={arXiv preprint arXiv:2503.19068},
-  year={2025},
+  journal={Journal of the American Statistical Association (JASA)},
+  year={2026},
   url={https://arxiv.org/abs/2503.19068},
   selected={true},
   pdf={https://arxiv.org/abs/2503.19068},
